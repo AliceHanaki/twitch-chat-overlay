@@ -1,0 +1,50 @@
+body {
+  /* background-color: rgba(0, 0, 0, 0); */
+  background-color: #666;
+  font-family: 'Noto Sans JP', sans-serif;
+  margin: 0px auto;
+  overflow: hidden;
+}
+.chat {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  margin-bottom: 4px;
+}
+.message {
+  padding-left: 8px;
+  padding-right: 8px;
+}
+.notif {
+  margin: 8px 8px 2px 8px;
+  padding: 0px 8px 2px 8px;
+  color: #EEE;
+  background-color: #222;
+  border-radius: 0.25rem;
+  box-shadow: -1px 0 1px #222, 1px 0 1px #222, 0 -1px 1px #222, 0 1px 1px #222;
+}
+.message .name_light {
+  text-shadow: -1px 0 1px #222, 1px 0 1px #222, 0 -1px 1px #222, 0 1px 1px #222;
+}
+.message .name_dark {
+  text-shadow: -1px 0 1px #EEE, 1px 0 1px #EEE, 0 -1px 1px #EEE, 0 1px 1px #EEE;
+}
+.message .content {
+  color: #EEE;
+  text-shadow: -1px 0 2px #222, 1px 0 2px #222, 0 -1px 2px #222, 0 1px 2px #222;
+}
+.message .pronouns, .notif .pronouns {
+  color: #EEE;
+  font-family: 'Roboto Condensed', sans-serif;
+  text-shadow: -1px 0 1px #222, 1px 0 1px #222, 0 -1px 1px #222, 0 1px 1px #222;
+  align-items: center;
+  border: 0.1rem solid;
+  border-radius: 0.25rem;
+  /*box-shadow: -1px 0 1px #222, 1px 0 1px #222, 0 -1px 1px #222, 0 1px 1px #222;*/
+}
+.message .emote, .notif .emote {
+  display: inline-block;
+  /*width: 1.1em;*/
+  height: 1.1em;
+  vertical-align: sub;
+}
