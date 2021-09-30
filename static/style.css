@@ -42,9 +42,10 @@ body {
   border-radius: 0.25rem;
   /*box-shadow: -1px 0 1px #222, 1px 0 1px #222, 0 -1px 1px #222, 0 1px 1px #222;*/
 }
-.message .emote, .notif .emote {
+.message .emote, .notif .emote, .message .emoji, .notif .emoji {
   display: inline-block;
-  /*width: 1.1em;*/
+  min-width: 1.1em;
   height: 1.1em;
   vertical-align: sub;
+  background-size: contain;
 }

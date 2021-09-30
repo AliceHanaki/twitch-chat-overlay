@@ -8,6 +8,12 @@ var options = {
 const client = new tmi.Client(options);
 client.connect().catch(console.error);
 
+var emoji = new EmojiConvertor();
+emoji.allow_native = false;
+emoji.replace_mode = 'img';
+emoji.img_set = 'twitter';
+emoji.img_sets.twitter.path = '/static/emoji/';
+
 client.on('connecting', (address, port) => {
   console.log('Connecting to ' + channel + ' (' + address + ':' + port + ')')
 });
@@ -252,6 +258,7 @@ function parseMessage(message, emotes) {
     }
     message = message.replace(regex, '<img class="emote" src="' + emoteList[emote] + '">');
   }
+  message = emoji.replace_unified(message);
   return message;
 }
 function parseBadges(badges) {
