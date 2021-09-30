@@ -267,12 +267,12 @@ function parseBadges(badges) {
     if (badgeList['channel'].hasOwnProperty(badge)) {
       if (badgeList['channel'][badge]['versions'].hasOwnProperty(badges[badge])) {
         var url = badgeList['channel'][badge]['versions'][badges[badge]]['image_url_4x'];
-        text += '<img class="emote" src="' + url + '">&nbsp;'
+        text += '<img class="badge" src="' + url + '">&nbsp;'
       }
     } else if (badgeList['global'].hasOwnProperty(badge)) {
       if (badgeList['global'][badge]['versions'].hasOwnProperty(badges[badge])) {
         var url = badgeList['global'][badge]['versions'][badges[badge]]['image_url_4x'];
-        text += '<img class="emote" src="' + url + '">&nbsp;'
+        text += '<img class="badge" src="' + url + '">&nbsp;'
       }
     }
   }

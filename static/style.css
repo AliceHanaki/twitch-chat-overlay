@@ -44,6 +44,13 @@ body {
 }
 .message .emote, .notif .emote, .message .emoji, .notif .emoji {
   display: inline-block;
+  min-width: 1.4em;
+  height: 1.4em;
+  vertical-align: bottom;
+  background-size: contain;
+}
+.message .badge, .notif .badge {
+  display: inline-block;
   min-width: 1.1em;
   height: 1.1em;
   vertical-align: sub;
