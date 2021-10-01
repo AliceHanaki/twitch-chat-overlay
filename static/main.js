@@ -251,7 +251,7 @@ function parseMessage(message, emotes) {
   message = message.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
   for (var emote in emoteList) {
     //message = message.replace(emote, '<img class="emote" src="' + emoteList[emote] + '">');
-    var regemote = emote.replace('(', '\\(').replace(')', '\\)').replace('|', '\\|');
+    var regemote = emote.replace('\\', '\\\\').replace('(', '\\(').replace(')', '\\)').replace('|', '\\|');
     var regex = new RegExp('\\b\(' + regemote + '\)\\b', 'g');
     if (emote == ':)' || emote == ':(') {
       regex = new RegExp('\\B\(' + regemote + '\)\\B', 'g');
