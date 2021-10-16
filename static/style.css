@@ -23,11 +23,8 @@ body {
   border-radius: 0.25rem;
   box-shadow: -1px 0 1px #222, 1px 0 1px #222, 0 -1px 1px #222, 0 1px 1px #222;
 }
-.message .name_light {
+.message .name {
   text-shadow: -1px 0 1px #222, 1px 0 1px #222, 0 -1px 1px #222, 0 1px 1px #222;
-}
-.message .name_dark {
-  text-shadow: -1px 0 1px #EEE, 1px 0 1px #EEE, 0 -1px 1px #EEE, 0 1px 1px #EEE;
 }
 .message .content {
   color: #EEE;
