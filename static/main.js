@@ -187,7 +187,7 @@ function sendMessage(tags, message) {
   } else {
     color = tags['color'];
   }
-  var append = '<div class="message" id="' + tags['id'] + '">';
+  var append = '<div class="message user_' + tags['username'] + '" id="' + tags['id'] + '">';
   if (tags['badges']) {
     append += parseBadges(tags['badges']);
   }
@@ -204,7 +204,7 @@ function sendMessage(tags, message) {
   append += '</span>';
   append += '</div>';
   $('.chat').append(append);
-  
+
   messageCount += 1;
   checkMessageCount();
 }
@@ -293,6 +293,15 @@ client.on('cheer', (channel, tags, message) => {
 client.on('raided', (channel, username, viewers) => {
   console.log('Raid from' + username);
   sendNotif(username + ' is rading with a party of ' + viewers + '.');
+});
+
+client.on('ban', (channel, username, reason, tags) => {
+  console.log('Banned: ' + username);
+  $('.user_' + username).remove();
+});
+client.on('timeout', (channel, username, reason, duration, userstate) => {
+  console.log('Timeout: ' + username);
+  $('.user_' + username).remove();
 });
 
 function sendNotif(message) {
