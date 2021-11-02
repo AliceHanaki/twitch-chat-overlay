@@ -172,6 +172,10 @@ client.on('message', (channel, tags, message, self) => {
 });
 
 function sendMessage(tags, message) {
+  if (tags['mod'] && message == '!refresh' || tags['username'] == channel.toLowerCase() && message == '!refresh') {
+    location.reload();
+  }
+
   var pronoun = null;
   if (pronouns.hasOwnProperty(tags['username'])) {
     pronoun = pronouns[tags['username']];
